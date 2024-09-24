@@ -5,14 +5,9 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { SignUpFormService } from '../sign-up-form.service';
 import {
   combineLatest,
-  debounceTime,
   distinctUntilChanged,
-  filter,
-  forkJoin,
-  iif,
   map, skipWhile,
   startWith,
-  takeUntil,
 } from 'rxjs';
 import { ToastrService } from 'ngx-toastr';
 
