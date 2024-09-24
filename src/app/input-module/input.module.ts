@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { TextInputComponent } from './components/text-input/text-input.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { JsonPipe, NgClass, NgIf } from '@angular/common';
+import { NgClass, NgIf } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -14,8 +14,7 @@ import { JsonPipe, NgClass, NgIf } from '@angular/common';
     ReactiveFormsModule,
     FormsModule,
     NgIf,
-    NgClass,
-    JsonPipe,
+    NgClass
   ],
 })
 export class InputModule { }
