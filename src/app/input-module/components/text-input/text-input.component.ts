@@ -60,7 +60,6 @@ export class TextInputComponent implements AfterViewInit, ControlValueAccessor, 
   }
 
   validate(control: AbstractControl): ValidationErrors|null {
-    console.log(1, control)
     return {'custom': true};
   }
 
