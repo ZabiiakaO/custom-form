@@ -1,0 +1,14 @@
+<div class="input-wrapper">
+  <input
+    [id]="id"
+    [type]="type"
+    [placeholder]="placeholder"
+    [disabled]="isDisabled"
+    [(ngModel)]="value"
+    (blur)="onTouched($event)"
+  />
+  <ng-container *ngIf="errorText">
+    <div class="invalid-error">{{ errorText }}</div>
+  </ng-container>
+
+</div>

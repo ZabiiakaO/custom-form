@@ -1,0 +1,9 @@
+.input-wrapper {
+  position: relative;
+  .invalid-error {
+    font-size: 0.5rem;
+    color: red;
+    position: absolute;
+    bottom: 0;
+  }
+}

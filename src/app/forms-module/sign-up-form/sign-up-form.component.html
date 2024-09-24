@@ -1,0 +1,35 @@
+<div class="sign-up-form-wrapper">
+  <form [formGroup]="signUpForm" (ngSubmit)="submit()">
+    
+    <app-text-input
+      [id]="'email'"
+      [label]="'Email'"
+      [placeholder]="'Email'"
+      [formControlName]="'email'"
+      [errorText]="emailErrorText"
+    ></app-text-input>
+    
+    <app-text-input
+      [id]="'password'"
+      [type]="'password'"
+      [label] ="'Password'"
+      [placeholder]="'Password'"
+      [formControlName]="'password'"
+      [errorText]="passwordErrorText"
+    ></app-text-input>
+    
+    <app-text-input
+      [id]="'confirm'"
+      [type]="'password'"
+      [isDisabled]="!signUpForm.get('password')?.value"
+      [label]="'Confirm Password'"
+      [placeholder]="'Confirm Password'"
+      [formControlName]="'confirmPassword'"
+      [errorText]="confirmPasswordErrorText"
+    ></app-text-input>
+    
+    <button [disabled]="isSubmitDisable" type="submit">Submit</button>
+    
+    <button [disabled]="!signUpForm.touched" class="secondary" type="reset" (click)="resetForm()">Reset</button>
+  </form>
+</div>
